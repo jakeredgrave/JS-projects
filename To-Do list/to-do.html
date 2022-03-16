@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>To-do list</title>
+</head>
+<header id="header">
+    <h1 id="title">Task List</h1>
+    <input type="text" id="filter" placeholder="Search task...">
+</header>
+<body>
+    <div id="container">
+        <section id="form_container">
+            <form id="form">
+                <input type="text" name="task" id="task_input_field" autocomplete="off" placeholder="Enter your task here" required>
+                <button type="submit" id="add_button">Add</button>
+            </form>
+            <section id="to-do_list_section">
+                <h2 id="to-do_list_title">TASKS</h2>
+                <ul id="to-do_list">
+                    <li class="task-group-item">Test Item<button class="delete_button">X</button></li>
+                </ul>
+            </section>
+        </section>
+    </div>
+    <script src="js/to-do script.js"></script>
+</body>
+</html>

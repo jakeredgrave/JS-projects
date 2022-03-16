@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka&family=Oswald&display=swap" rel="stylesheet">
+    <script src="js/note taker.js" defer></script>
+    <title>Note Taker</title>
+</head>
+<body>
+    <header id="header">
+        <h1>Note Taker</h1>
+    </header>
+    <div id="container">
+        <section id="form_box">
+            <h2>Add A New Note</h2>
+            <form id="form">
+                <textarea id="note_text" cols="30" rows="5"></textarea>
+            </form>
+            <button type="submit" id="add_button">Add</button>
+        </section>
+        <section id="notes">
+            <div class="note_box"><p class="note_text">Test note</p><button class="note_details_button">More</button></div>
+            <div class="note_box"><p class="note_text">Test note</p><button class="note_details_button">More</button></div>
+            <div class="note_box"><p class="note_text">Test note</p><button class="note_details_button">More</button></div>
+            <div class="note_box"><p class="note_text">Test note</p><button class="note_details_button">More</button></div>
+        </section>
+        <section id="note_modal">
+            <div id="modal_text"></div>
+            <button id="modal_close">X</button>
+        </section>
+    </div>
+</body>
+</html>
