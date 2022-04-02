@@ -3,7 +3,9 @@ let score = document.getElementById("score");
 let fails = document.getElementById("fails");
 let cards = document.querySelectorAll(".card");
 
-
+let resetButton = document.getElementById("reset_button");
+// add eventListener to reset button
+resetButton.addEventListener("click", hideCards);
 
 // add eventListener to every card
 for (let i =  0; i < 6; i++) {
@@ -31,19 +33,17 @@ function revealCard(event) {
         if (revealCounter == 0 && imgAltArray[0] === imgAltArray[1]) {
             imgAltArray = [];
             latestTwoRevealedCards = [];
-            points++
-            score.textContent = `Score: ${points}`;
+            points++;
+            score.textContent = points;
             revealCounter = 2;
         }
-        else if (revealCounter == 0 && imgAltArray[0] !== imgAltArray[1]) {
+        else if (revealCounter == 0 && imgAltArray !== [] && imgAltArray[0] !== imgAltArray[1]) {
             wrongGuesses++;
-            fails.textContent = `Failed Attempts: ${wrongGuesses}`
+            fails.textContent = wrongGuesses;
             imgAltArray = [];
             // make cards flip back
             setTimeout(flipBack, 1000);
         }
-        
-        
     }    
 }
 
@@ -54,4 +54,21 @@ function flipBack() {
     }
     latestTwoRevealedCards = [];
             revealCounter = 2;
+}
+
+function hideCards(event) {
+    for(let i = 0; i < 6; i++) {
+        cards[i].firstChild.style.visibility = "hidden";
+    }
+    revealCounter = 2;
+    points = 0;
+    wrongGuesses = 0;
+    score.textContent = 0;
+    fails.textContent = 0;
+    imgAltArray = [];
+    console.log(imgAltArray);
+    console.log(revealCounter);
+    //let cardImg = document.getElementById('card1');
+    //console.log(cards.firstChild);
+    
 }
