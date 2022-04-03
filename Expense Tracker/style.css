@@ -1,0 +1,124 @@
+html {
+    font-size: 100%;
+    background-color: white;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    
+}
+#header {
+    margin: 0;
+    padding: 1em;
+    text-align: center;
+    font-size: 1.5rem;
+}
+#form {
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-areas: "label-name name name name"
+                         "label-date date label-price price";
+    grid-template-columns: 0.25fr 2fr 0.25fr 2fr;
+    grid-gap: 10px;
+    padding: 2rem;   
+    width: 80vw;
+}
+.label {
+    font-size: 2rem;
+}
+#expense_name_label {
+    grid-row-start: label-name;
+    grid-row-end: label-name;
+    grid-column-start: label-name;
+    grid-column-end: label-name;
+}
+#expense_name {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    grid-row-start: name;
+    grid-row-end: name;
+    grid-column-start: name;
+    grid-column-end: name;
+    
+}
+#expense_date_label {
+    grid-row-start: label-date;
+    grid-row-end: label-date;
+    grid-column-start: label-date;
+    grid-column-end: label-date;
+}
+#expense_date {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    grid-row-start: date;
+    grid-row-end: date;
+    grid-column-start: date;
+    grid-column-end: date;
+}
+#expense_price_label {
+    grid-row-start: label-price;
+    grid-row-end: label-price;
+    grid-column-start: label-price;
+    grid-column-end: label-price;
+}
+#expense_price {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    grid-row-start: price;
+    grid-row-end: price;
+    grid-column-start: price;
+    grid-column-end: price;
+}
+input[type=text], input[type=date], input[type=number] {
+    width: 100%;
+    border: none;
+    background-color: lightgreen;
+}
+#add_button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    padding: 2rem;
+    font-size: 1.5em;
+}
+#add_button:hover {
+    outline: 2px solid lightseagreen;
+}
+#add_button:active {
+    background-color: lightgreen;
+}
+#expense_table {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+.expense_table_header {
+    background-color: lightseagreen;
+    padding: 1em;
+    min-width: 150px;
+}
+.expense_table_cell {
+    padding: 1em;
+    min-width: 150px;
+    text-align: center;
+    background-color: lightgreen;
+}
+#total_expense_value {
+    background-color: lightseagreen;
+    margin-left: auto;
+    margin-right: auto;
+    
+    padding: 1rem;
+    text-align: center;
+    
+    max-width: 200px;
+}
